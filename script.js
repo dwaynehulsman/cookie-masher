@@ -70,38 +70,3 @@ window.setInterval(function(){
     points = points + auto_clicker;
     document.getElementById('total_points').innerHTML = "Cookies: " + points;
 }, 1000);
-
-
-
-
-//cookies
-var today = new Date();
-var expiry = new Date(today.getTime() + 30 * 24 * 3600 * 1000); // plus 30 days
-
-if (document.cookie.indexOf("visited") >= 0) {
-    // They've been here before.
-    document.getElementById('total_points').innerHTML = document.write(getCookie("score"));;
-}
-else {
-    // set a new cookie
-    document.cookie = "visited=true; max-age=" + 60 * 60 * 24 * 100; // 60 seconds to a minute, 60 minutes to an hour, 24 hours to a day, and 10 days.
-}
-
-window.onbeforeunload = function savecookie()
-{
-    document.cookie = points;
-    return true;
-};
-
-window.onload = function getCookie()
-{
-    var re = new RegExp(name + "=([^;]+)");
-    var value = re.exec(document.cookie);
-    return (value != null) ? unescape(value[1]) : null;
-};
-
-window.onload = function loadcookie()
-{
-
-};
-
