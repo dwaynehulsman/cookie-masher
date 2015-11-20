@@ -39,10 +39,19 @@ function deleteCookie(name, path, domain) {
 }
 
 //$arg1 = Name $arg2 = Value of name $arg3 = expiry date in days
-createCookie("cookies", "100", 30);
+
 
 //$arg1 = cookie name
-console.log(getCookie("cookies"));
+
 
 //$arg1 = cookie name
+
 // deleteCookie("author");
+
+//update cookies
+window.setInterval(function(){
+  console.log(points);
+  createCookie("cookies", points, 30);
+  console.log(getCookie("cookies"));
+
+}, 10000);
