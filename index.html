@@ -2,29 +2,30 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="style/style.css">
+    <link rel="stylesheet" type="text/css" href="style/grid.css">
+
     <link href='https://fonts.googleapis.com/css?family=Roboto:900' rel='stylesheet' type='text/css'>
+
     <script src="script.js"></script>
-<<<<<<< HEAD
+
     <title>Cookie Masher</title>
-=======
+
     <script src="cookie.js"></script>
     <script src="cookies.js"></script>
     <title>Cookie Clicker</title>
->>>>>>> origin/master
+
 </head>
 <body onload="ask_name() ">
-    <div id="game_room">
+  <div class="container-fluid">
 
-        <div id="cookie" onclick="pressed();">
-            <div id="bakery_name">My bakery</div>
-            <img src="img/cookie.png" >
-        </div>
+    <div class="row">
 
-        <div id="upgrade_buttons">
-            <button type="button" id="button_upgrade" onclick="click_upgrade();">Clicker: +1 <br /> Price: 1</button><br />
-            <button id="passive_upgrade" onclick="passive_upgrade()">Clicks per sec: +1<br />Price: 50</button>
-        </div>
+      <!-- Values interface start-->
+      <div class="col-md-12" id="stats">
+
+        <h3>Cookie stats</h3>
 
         <div id="values">
             <div id="total_points">Cookies: 0</div>
@@ -32,7 +33,39 @@
             <div id="passive_value">Clicks per sec: 0</div>
         </div>
 
-        <audio id="audio_upgrade" src="audio/upgrade_sound.wav" preload="auto"></audio>
+      </div>
+      <!-- Values interface stop-->
+
+
+      <!-- Middle interface start-->
+      <div class="col-md-76" id="middle">
+
+        <div id="cookie" onclick="pressed();">
+            <div id="bakery_name">My bakery</div>
+            <img src="img/cookie.png" >
+        </div>
+
+      </div>
+      <!-- Middle interface stop-->
+
+      <!-- Upgrade interface start-->
+      <div class="col-md-12" id="upgrades">
+
+        <h3>Cookie upgrades</h3>
+        
+        <div id="upgrade_buttons">
+            <button type="button" id="button_upgrade" onclick="click_upgrade();">Clicker: +1 <br /> Price: 1</button><br />
+            <button id="passive_upgrade" onclick="passive_upgrade()">Clicks per sec: +1<br />Price: 50</button>
+        </div>
+
+      </div>
+      <!-- Upgrade interface stop-->
+
     </div>
+
+
+
+  <audio id="audio_upgrade" src="audio/upgrade_sound.wav" preload="auto"></audio>
+
 </body>
 </html>

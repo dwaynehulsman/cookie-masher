@@ -1,31 +1,48 @@
 body{
-    width: 100%
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#game_room{
+    width: 100%;
     font-family: 'Roboto', sans-serif;
-    width: 80%;
+      background-color: #78564C;
 }
 
-#cookie{
-    width: 400px;
+#stats {
+  background-color: #8F5A53;
+  height: 100%;
+  border-radius: 20px;
+}
+
+#middle {
+  background-color: #78564C;
+}
+
+#upgrades {
+  background-color: #854545;
+  border-radius: 20px;
+}
+#cookie {
     float: left;
     text-align: center;
+    width: 100%;
+}
+#cookie img {
+  padding-top: 20px;
+  width: 20%;
+  margin: auto;
+}
+#cookie img:active {
+  width:19%;
 }
 
-#upgrade_buttons{
+#bakery_name {
+  font-size: 30px;
+}
+#upgrade_buttons {
     float: right;
     margin-top : 20%;
     margin-right: 10%;
 }
 
 #values{
-    width: 200px;
     margin-left: 15%;
-
 }
 #button_upgrade, #passive_upgrade {
     -moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
