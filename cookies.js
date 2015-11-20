@@ -1,19 +1,48 @@
-function setCookie("points", points, 1000) {
-    var d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    var expires = "expires="+d.toUTCString();
-    document.cookie = cname + "=" + cvalue + "; " + expires;
-}
+// Make a cookie
+function createCookie(name, value, expires, path, domain) {
+  var cookie = name + "=" + escape(value) + ";";
 
-function getCookie("points") {
-    var name = cname + "=";
-    var ca = document.cookie.split(';');
-    for(var i=0; i<ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0)==' ') c = c.substring(1);
-        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+  if (expires) {
+
+    if(expires instanceof Date) {
+
+      if (isNaN(expires.getTime()))
+       expires = new Date();
     }
-    return "";
+    else
+      expires = new Date(new Date().getTime() + parseInt(expires) * 1000 * 60 * 60 * 24);
+
+    cookie += "expires=" + expires.toGMTString() + ";";
+  }
+
+  if (path)
+    cookie += "path=" + path + ";";
+  if (domain)
+    cookie += "domain=" + domain + ";";
+
+  document.cookie = cookie;
 }
 
-document.cookie("point", point, Date+1000)
+// Read a cookie
+function getCookie(name) {
+  var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
+  var result = regexp.exec(document.cookie);
+  return (result === null) ? null : result[1];
+}
+
+
+// Delete a cookie
+function deleteCookie(name, path, domain) {
+  // If the cookie exists
+  if (getCookie(name))
+    createCookie(name, "", -1, path, domain);
+}
+
+//$arg1 = Name $arg2 = Value of name $arg3 = expiry date in days
+createCookie("cookies", "100", 30);
+
+//$arg1 = cookie name
+console.log(getCookie("cookies"));
+
+//$arg1 = cookie name
+// deleteCookie("author");
