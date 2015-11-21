@@ -1,13 +1,16 @@
-/**
- * Created by Gijs on 12-10-2015.
- */
-var points = getCookie("cookies");
+var points = 0;
 var click_value = 1;
 var auto_clicker = 0;
 var upgrade_price = 1;
 var upgrade_price_auto_clicker = 50;
 
 
+
+console.log(getCookie("cookies"));
+
+if (getCookie("cookies") > points) {
+  points = Number(getCookie('cookies'));
+}
 
 function ask_name(){
     var name = prompt("Please enter your bakery name: ");

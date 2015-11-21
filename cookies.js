@@ -16,7 +16,7 @@ function createCookie(name, value, expires, path, domain) {
   }
 
   if (path)
-    cookie += "path=" + path + ";";
+    cookie += "path=/;";
   if (domain)
     cookie += "domain=" + domain + ";";
 
@@ -24,10 +24,15 @@ function createCookie(name, value, expires, path, domain) {
 }
 
 // Read a cookie
-function getCookie(name) {
-  var regexp = new RegExp("(?:^" + name + "|;\s*"+ name + ")=(.*?)(?:;|$)", "g");
-  var result = regexp.exec(document.cookie);
-  return (result === null) ? null : result[1];
+function getCookie(cname) {
+    var name = cname + "=";
+    var ca = document.cookie.split(';');
+    for(var i=0; i<ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0)==' ') c = c.substring(1);
+        if (c.indexOf(name) == 0) return c.substring(name.length,c.length);
+    }
+    return "";
 }
 
 
