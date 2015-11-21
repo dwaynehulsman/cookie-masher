@@ -146,6 +146,7 @@ function update_prices(){
   while(priceUpdateAutoClicker > 0){
     priceUpdateAutoClicker = priceUpdateAutoClicker - 1;
     auto-click-upgrade-cost = auto-click-upgrade-cost * 2;
+
   }else if(priceUpdateAutoClicker === 0){
     document.getElementById('auto-click-upgrade-cost').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
     document.getElementById('auto-click-upgrade-cost_mobile').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
