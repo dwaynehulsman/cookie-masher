@@ -1,7 +1,7 @@
 /**
  * Created by Gijs on 12-10-2015.
  */
-var points = 0;
+var points = getCookie("cookies");
 var click_value = 1;
 var auto_clicker = 0;
 var upgrade_price = 1;
@@ -70,3 +70,11 @@ window.setInterval(function(){
     points = points + auto_clicker;
     document.getElementById('total_points').innerHTML = "Cookies: " + points;
 }, 1000);
+
+//update cookies
+window.setInterval(function(){
+  console.log(points);
+  createCookie("cookies", points, 30);
+  console.log(getCookie("cookies"));
+
+}, 10000);
