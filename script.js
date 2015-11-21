@@ -4,7 +4,8 @@ var auto_clicker = 0;
 var upgrade_price = 1;
 var bakkeryName = "My Bakkery";
 var upgrade_price_auto_clicker = 50;
-
+var priceUpdateClick = click_value;
+var priceUpdateAutoClicker = auto_clicker;
 
 window.onload = function () {
   if (getCookie("cookies") > points) {
@@ -122,13 +123,31 @@ function click_upgrade(){
 window.setInterval(function(){
     points = points + auto_clicker;
     document.getElementById('total_points').innerHTML = "Cookies: " + points;
-    document.getElementById('cookieCount').innerHTML = points + " Cookies";
     document.getElementById('total_points_mobile').innerHTML = "Cookies: " + points;
     document.getElementById('passive_value').innerHTML = "Cookies per sec: " + auto_clicker;
     document.getElementById('passive_value_mobile').innerHTML = "Cookies per sec: " + auto_clicker;
-}, 200);
+}, 1000);
 
 //update cookies
 window.setInterval(function(){
   createCookie("cookies", points, 30);
 }, 10000);
+
+//get current prices on load
+function update_prices(){
+  while(priceUpdateClick > 0){
+    priceUpdateClick = priceUpdateClick - 1;
+    click-upgrade-cost = click-upgrade-cost * 2;
+  }else if(priceUpdateAutoClicker === 0){
+    document.getElementById('click-upgrade-cost').innerHTML = "Cost: " + upgrade_price + " Cookies";
+    document.getElementById('click-upgrade-cost_mobile').innerHTML = "Cost: " + upgrade_price + " Cookies";
+  }
+
+  while(priceUpdateAutoClicker > 0){
+    priceUpdateAutoClicker = priceUpdateAutoClicker - 1;
+    auto-click-upgrade-cost = auto-click-upgrade-cost * 2;
+  }else if(priceUpdateAutoClicker === 0){
+    document.getElementById('auto-click-upgrade-cost').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
+    document.getElementById('auto-click-upgrade-cost_mobile').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
+  }
+}
