@@ -1,28 +1,57 @@
-body{
+body {
     width: 100%;
     font-family: 'Roboto', sans-serif;
-      background-color: #78564C;
+    background-color: #a23b2a;
+    margin: 0px;
+    color: white;
 }
 
 h3 {
   text-align: center;
 }
+
 hr {
   color: #78564C;
   background-color: #78564C;
   border-bottom: 4px;
 }
+
+.upgrade-icon {
+  height: 120px;
+  width: auto;
+}
+
+#cookieCount {
+  color: white;
+}
 #stats {
-  background-color: #8F5A53;
+  background-color: #94281f;
   height: 100%;
   border-radius: 20px;
   padding: 5px;
+  margin-top: 15px;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 4px solid #45342b;
 }
 
 #middle {
   padding-top: 10px;
   padding-bottom: 10px;
 }
+
+.mobile-version {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pc-version {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
 #middle-mobile {
   padding-top: 10px;
   padding-bottom: 10px;
@@ -30,20 +59,29 @@ hr {
 }
 
 #upgrades {
-  background-color: #854545;
+  background-color: #94281f;
   border-radius: 20px;
   padding: 5px;
+  margin-top: 15px;
+  color: white;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 4px solid #45342b;
 }
+
 #cookie {
     text-align: center;
     width: 100%;
 }
+
 #cookie img {
   padding-top: 20px;
   width: 304px;
   height: auto;
   margin: auto;
 }
+
 #cookie img:active {
   width: 280px;
   height: auto;
@@ -54,46 +92,42 @@ hr {
   font-size: 30px;
 }
 
-#values{
+#values {
     margin-left: 5px;
 }
+
 #button_upgrade, #passive_upgrade {
-    -moz-box-shadow:inset 0px 1px 0px 0px #fff6af;
-    -webkit-box-shadow:inset 0px 1px 0px 0px #fff6af;
-    box-shadow:inset 0px 1px 0px 0px #fff6af;
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffec64), color-stop(1, #ffab23));
-    background:-moz-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-    background:-webkit-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-    background:-o-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-    background:-ms-linear-gradient(top, #ffec64 5%, #ffab23 100%);
-    background:linear-gradient(to bottom, #ffec64 5%, #ffab23 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffec64', endColorstr='#ffab23',GradientType=0);
-    background-color:#ffec64;
-    -moz-border-radius:6px;
-    -webkit-border-radius:6px;
-    border-radius:6px;
-    border:1px solid #ffaa22;
-    display:inline-block;
-    cursor:pointer;
-    color:#333333;
-    font-family:Arial;
+    background: #b5762a;
+    background-image: -webkit-linear-gradient(top, #b5762a, #9e6525);
+    background-image: -moz-linear-gradient(top, #b5762a, #9e6525);
+    background-image: -ms-linear-gradient(top, #b5762a, #9e6525);
+    background-image: -o-linear-gradient(top, #b5762a, #9e6525);
+    background-image: linear-gradient(to bottom, #b5762a, #9e6525);
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    color: #ffffff;
+    font-size: 22px;
+    padding: 4px 25px 4px 25px;
+    cursor: pointer;
+    text-decoration: none;
     font-size:15px;
     font-weight:bold;
     padding:6px 24px;
     text-decoration:none;
-    text-shadow:0px 1px 0px #ffee66;
     margin: 2px;
 }
+
 #button_upgrade:hover, #passive_upgrade:hover {
-    background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ffab23), color-stop(1, #ffec64));
-    background:-moz-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-    background:-webkit-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-    background:-o-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-    background:-ms-linear-gradient(top, #ffab23 5%, #ffec64 100%);
-    background:linear-gradient(to bottom, #ffab23 5%, #ffec64 100%);
-    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffab23', endColorstr='#ffec64',GradientType=0);
-    background-color:#ffab23;
+  background: #8a581e;
+  background-image: -webkit-linear-gradient(top, #8a581e, #945f22);
+  background-image: -moz-linear-gradient(top, #8a581e, #945f22);
+  background-image: -ms-linear-gradient(top, #8a581e, #945f22);
+  background-image: -o-linear-gradient(top, #8a581e, #945f22);
+  background-image: linear-gradient(to bottom, #8a581e, #945f22);
+  text-decoration: none;
 }
+
 #button_upgrade:active, #passive_upgrade:active {
     position:relative;
     top:1px;

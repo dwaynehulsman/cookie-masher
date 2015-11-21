@@ -2,6 +2,10 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content=" initial-scale=1, maximum-scale=1, user-scalable=0"/>
+
+    <meta name="theme-color" content="#78564C">
 
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <link rel="stylesheet" type="text/css" href="style/grid.css">
@@ -14,7 +18,7 @@
     <title>Cookie Masher</title>
 
 </head>
-<body onload="ask_name() ">
+<body onload="ask_name()">
   <div class="container-fluid">
 
     <div class="mobile-version visible-xs">
@@ -62,7 +66,7 @@
 
     </div>
 
-    <div class="row hidden-xs">
+    <div class="pc-version row hidden-xs">
 
       <!-- Values interface start-->
       <div class="col-md-20 col-sm-20 col-xs-20" id="stats">
@@ -85,6 +89,7 @@
 
         <div id="cookie" onclick="pressed();">
             <div id="bakery_name">My bakery</div>
+            <div id="cookieCount">4598 Cookies</div>
             <img src="img/cookie.png" >
         </div>
 
@@ -98,8 +103,15 @@
         <hr>
 
         <h4>Clicking boost</h4>
-        <button type="button" id="button_upgrade" onclick="click_upgrade();">Buy</button>
-        <p id="click-upgrade-cost">Cost: 1 Cookie</p>
+        <img class="upgrade-icon" src="img/clicker.png" alt="clicker"><br>
+        <div class="row">
+          <div class="col-md-30">
+            <button type="button" id="button_upgrade" onclick="click_upgrade();">Buy</button>
+          </div>
+          <div class="col-md-70">
+            <p id="click-upgrade-cost">Cost: 1 Cookie</p>
+          </div>
+        </div>
         <h4>Automated clicker</h4>
         <button id="passive_upgrade" onclick="passive_upgrade()">Buy</button>
         <p id="auto-click-upgrade-cost">Cost: 1 Cookie</p>

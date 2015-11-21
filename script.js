@@ -122,10 +122,11 @@ function click_upgrade(){
 window.setInterval(function(){
     points = points + auto_clicker;
     document.getElementById('total_points').innerHTML = "Cookies: " + points;
+    document.getElementById('cookieCount').innerHTML = points + " Cookies";
     document.getElementById('total_points_mobile').innerHTML = "Cookies: " + points;
     document.getElementById('passive_value').innerHTML = "Cookies per sec: " + auto_clicker;
     document.getElementById('passive_value_mobile').innerHTML = "Cookies per sec: " + auto_clicker;
-}, 1000);
+}, 200);
 
 //update cookies
 window.setInterval(function(){
