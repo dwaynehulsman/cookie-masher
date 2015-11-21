@@ -134,7 +134,7 @@ window.setInterval(function(){
 }, 10000);
 
 //get current prices on load
-function update_prices(){
+/*function update_prices(){
   while(priceUpdateClick > 0){
     priceUpdateClick = priceUpdateClick - 1;
     click-upgrade-cost = click-upgrade-cost * 2;
@@ -151,4 +151,4 @@ function update_prices(){
     document.getElementById('auto-click-upgrade-cost').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
     document.getElementById('auto-click-upgrade-cost_mobile').innerHTML = "Cost: " + upgrade_price_auto_clicker + " Cookies";
   }
-}
+}*/
