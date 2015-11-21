@@ -17,17 +17,63 @@
 <body onload="ask_name() ">
   <div class="container-fluid">
 
-    <div class="row">
+    <div class="mobile-version visible-xs">
 
-      <!-- Values interface start-->
-      <div class="col-md-12" id="stats">
+      <!-- Values mobile-interface start-->
+      <div id="stats">
 
         <h3>Cookie stats</h3>
+        <hr>
+
+        <div id="values">
+            <div id="total_points_mobile">Cookies: 0</div>
+            <div id="click_value_mobile">Cookies per click: 1</div>
+            <div id="passive_value_mobile">Cookies per sec: 0</div>
+        </div>
+
+      </div>
+      <!-- Values mobile-interface stop-->
+
+      <!-- Middle interface start-->
+      <div id="middle-mobile">
+
+        <div id="cookie" onclick="pressed();">
+            <div id="bakery_name_mobile">My bakery</div>
+            <img src="img/cookie.png" >
+        </div>
+
+      </div>
+      <!-- Middle mobile-interface stop-->
+
+      <!-- Upgrade mobile-interface start-->
+      <div id="upgrades">
+
+        <h3>Cookie upgrades</h3>
+        <hr>
+
+        <h4>Clicking boost</h4>
+        <button type="button" id="button_upgrade" onclick="click_upgrade();">Buy</button>
+        <p id="click-upgrade-cost_mobile">Cost: 1 Cookie</p>
+        <h4>Automated clicker</h4>
+        <button id="passive_upgrade" onclick="passive_upgrade()">Buy</button>
+        <p id="auto-click-upgrade-cost_mobile">Cost: 1 Cookie</p>
+      </div>
+      <!-- Upgrade mobile-interface stop-->
+
+    </div>
+
+    <div class="row hidden-xs">
+
+      <!-- Values interface start-->
+      <div class="col-md-20 col-sm-20 col-xs-20" id="stats">
+
+        <h3>Cookie stats</h3>
+        <hr>
 
         <div id="values">
             <div id="total_points">Cookies: 0</div>
-            <div id="click_value">Cookies per Click: 1</div>
-            <div id="passive_value">Clicks per sec: 0</div>
+            <div id="click_value">Cookies per click: 1</div>
+            <div id="passive_value">Cookies per sec: 0</div>
         </div>
 
       </div>
@@ -35,7 +81,7 @@
 
 
       <!-- Middle interface start-->
-      <div class="col-md-76" id="middle">
+      <div class="col-md-60 col-sm-60" id="middle">
 
         <div id="cookie" onclick="pressed();">
             <div id="bakery_name">My bakery</div>
@@ -46,15 +92,17 @@
       <!-- Middle interface stop-->
 
       <!-- Upgrade interface start-->
-      <div class="col-md-12" id="upgrades">
+      <div class="col-md-20 col-sm-20 col-xs-20" id="upgrades">
 
         <h3>Cookie upgrades</h3>
+        <hr>
 
-        <div id="upgrade_buttons">
-            <button type="button" id="button_upgrade" onclick="click_upgrade();">Clicker: +1 <br /> Price: 1</button><br />
-            <button id="passive_upgrade" onclick="passive_upgrade()">Clicks per sec: +1<br />Price: 50</button>
-        </div>
-
+        <h4>Clicking boost</h4>
+        <button type="button" id="button_upgrade" onclick="click_upgrade();">Buy</button>
+        <p id="click-upgrade-cost">Cost: 1 Cookie</p>
+        <h4>Automated clicker</h4>
+        <button id="passive_upgrade" onclick="passive_upgrade()">Buy</button>
+        <p id="auto-click-upgrade-cost">Cost: 1 Cookie</p>
       </div>
       <!-- Upgrade interface stop-->
 
